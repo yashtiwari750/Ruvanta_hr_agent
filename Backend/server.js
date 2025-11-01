@@ -9,12 +9,19 @@ import Cors from "cors";
 
 const app = express();
 
-app.use(Cors(
-   {
-     origin:'http://localhost:5173',
-    credentials:true,
-   }
-))
+// added cors access point so that our backend allow our frontend website 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://ruvanta-hr-agent.vercel.app"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
+
+
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
