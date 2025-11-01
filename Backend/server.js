@@ -2,9 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import userRoute from './routes/userRoutes.js';
 import mongoose from "mongoose";
+import Cors from "cors";
 
 dotenv.config();
-import Cors from "cors";
 
 
 const app = express();
@@ -16,7 +16,7 @@ const allowedOrigins = [
   "https://ruvanta-hr-agent.vercel.app"
 ];
 
-app.use(cors({
+app.use(Cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
