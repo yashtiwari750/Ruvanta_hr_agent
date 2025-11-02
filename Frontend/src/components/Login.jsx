@@ -175,7 +175,7 @@ const Login = () => {
 
         {/* Footer Text */}
         <p className="text-center text-blue-200/50 text-sm mt-6">
-          AI HR Calling Agent - Powered by Vapi AI
+          AI HR Calling Agent - Powered by Ruvanta Technologies
         </p>
       </div>
     </div>
